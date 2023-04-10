@@ -16,9 +16,7 @@
 
 @_exported import Widgeteer
 
-public struct WidgeteerDemo {
-    public private(set) var text = "Hello, World!"
-
-    public init() {
-    }
+@_cdecl("widgeteer_main")
+public func main() {
+    
 }
