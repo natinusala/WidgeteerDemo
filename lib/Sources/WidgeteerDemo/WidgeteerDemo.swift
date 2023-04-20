@@ -18,5 +18,5 @@
 
 @_cdecl("widgeteer_main")
 public func main() {
-    
+    runApp(Text("Hello world!"))
 }
