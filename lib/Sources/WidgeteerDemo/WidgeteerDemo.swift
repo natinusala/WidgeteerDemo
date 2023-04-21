@@ -18,5 +18,9 @@
 
 @_cdecl("widgeteer_main")
 public func main() {
-    runApp(Text("Hello world!"))
+    runApp(
+        Directionality(textDirection: .ltr) {
+            Text("Hello world!")
+        }
+    )
 }
