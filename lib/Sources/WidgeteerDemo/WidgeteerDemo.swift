@@ -16,11 +16,15 @@
 
 @_exported import Widgeteer
 
-@_cdecl("widgeteer_main")
-public func main() {
-    runApp(
+struct WidgeteerDemo: Widget {
+    var body: some Widget {
         Directionality(textDirection: .ltr) {
             Text("Hello world!")
         }
-    )
+    }
+}
+
+@_cdecl("widgeteer_main")
+public func main() {
+    runApp(WidgeteerDemo())
 }
