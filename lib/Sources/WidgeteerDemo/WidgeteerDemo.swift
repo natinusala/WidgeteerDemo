@@ -18,9 +18,20 @@
 
 struct WidgeteerDemo: Widget {
     var body: some Widget {
-        Directionality(textDirection: .ltr) {
-            Text("Hello world!")
+        MaterialApp(
+            title: "Widgeteer Demo",
+            theme: ThemeData(primarySwatch: .blue)
+        ) {
+            HomePage(title: "Widgeteer Demo Home Page")
         }
+    }
+}
+
+struct HomePage: Widget {
+    let title: String
+
+    var body: some Widget {
+        Text(title)
     }
 }
 
