@@ -31,7 +31,12 @@ struct HomePage: Widget {
     let title: String
 
     var body: some Widget {
-        Text(title)
+        TextButton(onPressed: {
+            print("Boop!")
+        }) {
+            Text("Press me!")
+        }
+            .center()
     }
 }
 
