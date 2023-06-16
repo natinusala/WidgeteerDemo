@@ -14,6 +14,8 @@
    limitations under the License.
 */
 
+import Foundation
+
 @_exported import Widgeteer
 
 struct WidgeteerDemo: Widget {
@@ -31,12 +33,10 @@ struct HomePage: Widget {
     let title: String
 
     var body: some Widget {
-        TextButton(onPressed: {
-            print("Boop!")
-        }) {
-            Text("Press me!")
+        Column {
+            Text("First text")
+            Text("Second text")
         }
-            .center()
     }
 }
 
