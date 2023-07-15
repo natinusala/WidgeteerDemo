@@ -32,11 +32,32 @@ struct WidgeteerDemo: Widget {
 struct HomePage: Widget {
     let title: String
 
+    @Environment(\.theme)
+    var theme
+
+    @State
+    var counter = 0
+
     var body: some Widget {
-        Column {
-            Text("First text")
-            Text("Second text")
+        Scaffold {
+            Column(mainAxisAlignment: .center) {
+                Text("You have pushed the button this many times:")
+                Text("\(counter)", style: theme.textTheme.headlineMedium)
+            }.center()
+        } appBar: {
+            AppBar { Text(title) }
+        } floatingActionButton: {
+            FloatingActionButton(
+                onPressed: incrementCounter,
+                tooltip: "Increment"
+            ) {
+                Icon(.add)
+            }
         }
+    }
+
+    private func incrementCounter() {
+        counter += 1
     }
 }
 
