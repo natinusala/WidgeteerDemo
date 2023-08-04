@@ -1,6 +1,8 @@
 import UIKit
 import Flutter
 
+@_exported import WidgeteerDemo
+
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
   override func application(
