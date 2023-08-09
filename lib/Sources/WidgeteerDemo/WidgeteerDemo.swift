@@ -33,10 +33,10 @@ struct HomePage: Widget {
     let title: String
 
     @Environment(\.theme)
-    var theme
+    private var theme
 
     @State
-    var counter = 0
+    private var counter = 0
 
     var body: some Widget {
         Scaffold {
